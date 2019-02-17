@@ -1,0 +1,41 @@
+h2{
+    text-align: center
+}
+
+.row {
+    display: flex;
+    .box{
+        text-align: center;
+        padding: 20px;
+        min-width: 120px;
+        background: #607D8B;
+        border-radius: 2px;
+        margin: 0 10px;
+
+        h4{
+            position: relative;
+            color: #EEE;
+        }
+
+        &:hover{
+            background-color: #EEE;
+            cursor: pointer;
+            color: #607d8b; 
+
+            h4{
+                color: #607D8B;
+            }
+        }
+    }
+}
+
+[class*='col']{
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.col-lg-3{
+    width: 25%;
+}
+

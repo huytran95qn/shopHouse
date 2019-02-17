@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Hero } from 'src/app/models/hero.model';
 import { HeroService } from 'src/app/services/hero.service';
 
@@ -12,12 +13,8 @@ export class HeroesComponent {
   heroes: Hero[];
   selectedHero: Hero;
 
-  constructor(private _heroService: HeroService) {
+  constructor(private _heroService: HeroService,private router: Router) {
     this.getHeroes();
-  }
-
-  onSelect(_hero: Hero) {
-    this.selectedHero = _hero;
   }
 
   async getHeroes(): Promise<void> {
